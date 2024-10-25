@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 18:55:22 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/25 11:14:14 by Lmatkows         ###   ########.fr       */
+/*   Created: 2024/10/24 19:48:04 by Lmatkows          #+#    #+#             */
+/*   Updated: 2024/10/25 11:17:57 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void	*dest, const void *src, int len)
+void	*ft_memmove(void	*dest, const void *src, int len)
 {
 	int					i;
 	unsigned char		*strd;
 	const unsigned char	*strs;
 
-	i = 0;
 	strd = (unsigned char *)dest;
 	strs = (const unsigned char *)src;
-	if (len == 0 || dest == src)
-		return (dest);
-	while (i < len)
+	if (strd < strs && len != 0)
 	{
-		strd[i] = strs[i];
-		i++;
+		i = 0;
+		while (i < len)
+		{
+			strd[i] = strs[i];
+			i++;
+		}
+	}
+	else if (strd > strs && len != 0)
+	{
+		i = len;
+		while (i > 0)
+		{
+			strd[i - 1] = strs[i - 1];
+			i--;
+		}
 	}
 	return (dest);
 }
@@ -41,7 +51,7 @@ int	main(void)
 	strcpy(src, "Canaille");
 	puts(dest);
 	puts(src);
-	ft_memcpy(dest, src, 2);
+	ft_memmove(src + 2, src, 2);
 	puts(dest);
 	puts(src);
 }
