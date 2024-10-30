@@ -6,11 +6,13 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 22:05:39 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/25 22:24:09 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:10:39 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+#include <stddef.h>
+
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;

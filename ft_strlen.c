@@ -6,13 +6,15 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:55:08 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/24 18:05:05 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:15:16 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char	*str)
+#include <stddef.h>
+
+size_t	ft_strlen(const	char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
