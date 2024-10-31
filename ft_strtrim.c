@@ -6,22 +6,12 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:35:09 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/30 11:25:40 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:35:19 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 #include <stdlib.h>
-
-size_t	ft_strlen(const	char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 int	ft_charstr(char const c, char const *s)
 {
@@ -44,6 +34,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	char	*tab;
 
+	if (!s1 || !set)
+		return (NULL);
 	ista = 0;
 	iend = ft_strlen(s1) - 1;
 	i = 0;
@@ -54,7 +46,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	tab = malloc((iend - ista + 2) * sizeof(char));
 	if (tab == 0)
 		return (NULL);
-	while (i <= (iend - ista))
+	while (s1[i] && (i <= (iend - ista)))
 	{
 		tab[i] = s1[ista + i];
 		i++;

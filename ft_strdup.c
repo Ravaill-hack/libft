@@ -6,51 +6,16 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 22:48:57 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/25 23:09:22 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:05:23 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
-
-int	ft_strlen(char	*str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-void	*ft_bzero(void	*adr, int len)
-{
-	int		i;
-	char	*str;
-
-	i = 0;
-	str = adr;
-	while (i < len)
-	{
-		str[i] = '\0';
-		i++;
-	}
-	return (adr);
-}
-
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	void	*tab;
-
-	tab = malloc(nmemb * size);
-	if (tab == 0)
-		return (NULL);
-	ft_bzero(tab, nmemb * size);
-	return (tab);
-}
 
 char	*ft_strdup(const char *s)
 {
-	int		len;
+	size_t	len;
 	char	*str;
 	int		i;
 
