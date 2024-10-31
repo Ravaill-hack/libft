@@ -5,25 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 11:28:37 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 13:28:32 by Lmatkows         ###   ########.fr       */
+/*   Created: 2024/10/31 15:51:38 by Lmatkows          #+#    #+#             */
+/*   Updated: 2024/10/31 17:50:08 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-size_t	ft_len_ln(const	char *str, size_t ista, char c)
-{
-	size_t	i;
-
-	i = ista;
-	while ((str[i] != '\0') && (str[i] != c))
-		i++;
-	return (i - ista);
-}
-
-size_t	nb_lines(char const *s, char const c)
+size_t	ft_nbwords(char const *s, char c)
 {
 	size_t	count;
 	size_t	i;
@@ -39,61 +29,80 @@ size_t	nb_lines(char const *s, char const c)
 			count++;
 			is_nl = 0;
 		}
-		else if(s[i] == c)
+		else if (s[i] == c)
 			is_nl = 1;
 		i++;
 	}
 	return (count);
 }
 
-
-#include <stdio.h>
-
-char	**malloc_col(char const *s, char c)
+size_t	ft_lenw(char const *s, char c, size_t ist)
 {
-	char	**tab;
-	size_t	nb_ln;
 	size_t	i;
-	size_t	is;
 
-	nb_ln = nb_lines(s, c) + 1;
-	i = 0;
-	is = 0;
-	tab = (char **)malloc((nb_ln + 1) * sizeof(char *));
-	if (!tab)
+	i = ist;
+	while ((s[i] != '\0') && (s[i] != c))
+		i++;
+	return (i - ist);
+}
+
+char	*ft_fill(char const *s, char c, size_t istr, size_t lenw)
+{
+	char	*line;
+	size_t	i;
+	size_t	il;
+
+	i = istr;
+	il = 0;
+	line = (char *)malloc((lenw + 1) * sizeof(char));
+	if (!line)
 		return (NULL);
-	while (i < nb_ln)
+	while ((s[i] != c) && (s[i] != '\0'))
 	{
-		tab[i] = malloc((ft_len_ln(s, is, c) + 1) * sizeof(char));
-		is = is + ft_len_ln(s, is, c) + 1;
+		line[il] = s[i];
+		i++;
+		il++;
+	}
+	line[il] = '\0';
+	return (line);
+}
+
+void	ft_free(char **tab, size_t istop)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < istop)
+	{
+		free(tab[i]);
 		i++;
 	}
-	return (tab);
+	free(tab);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
+	size_t	istr;
 	size_t	i;
-	size_t	is;
-	size_t	j;
 
-	tab = malloc_col(s, c);
+	istr = 0;
 	i = 0;
-	is = 0;
-	while (i < nb_lines(s, c))
+	tab = (char **)malloc((ft_nbwords(s, c) + 1) * sizeof(char *));
+	if (!tab)
+		return (NULL);
+	while (i < ft_nbwords(s, c))
 	{
-		while (s[is] == c && s[is])
-			is++;
-		j = 0;
-		while (s[is] != c && s[is])
+		while (s[istr] == c)
+			istr++;
+		tab[i] = ft_fill(s, c, istr, ft_lenw(s, c, istr));
+		if (tab[i] == NULL)
 		{
-			tab[i][j] = s[is];
-			is ++;
-			j ++;
+			ft_free(tab, i);
+			return (NULL);
 		}
-		tab[i][j] = '\0';
 		i++;
+		istr = istr + ft_lenw(s, c, istr);
 	}
 	tab[i] = NULL;
 	return (tab);
