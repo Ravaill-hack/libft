@@ -6,14 +6,14 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:51:38 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 17:50:08 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/31 18:03:00 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-size_t	ft_nbwords(char const *s, char c)
+static size_t	ft_nbwords(char const *s, char c)
 {
 	size_t	count;
 	size_t	i;
@@ -36,7 +36,7 @@ size_t	ft_nbwords(char const *s, char c)
 	return (count);
 }
 
-size_t	ft_lenw(char const *s, char c, size_t ist)
+static size_t	ft_lenw(char const *s, char c, size_t ist)
 {
 	size_t	i;
 
@@ -46,7 +46,7 @@ size_t	ft_lenw(char const *s, char c, size_t ist)
 	return (i - ist);
 }
 
-char	*ft_fill(char const *s, char c, size_t istr, size_t lenw)
+static char	*ft_fill(char const *s, char c, size_t istr, size_t lenw)
 {
 	char	*line;
 	size_t	i;
@@ -67,7 +67,7 @@ char	*ft_fill(char const *s, char c, size_t istr, size_t lenw)
 	return (line);
 }
 
-void	ft_free(char **tab, size_t istop)
+static void	ft_free(char **tab, size_t istop)
 {
 	size_t	i;
 
