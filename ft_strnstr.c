@@ -6,31 +6,23 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 21:09:22 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/25 22:04:59 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:51:09 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char	*str)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*ft_strnstr(char *s1, char *s2, int n)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	int	i;
-	int	j;
-	int	lens2;
+	size_t	i;
+	size_t	j;
+	size_t	lens2;
 
 	i = 0;
 	j = 0;
 	lens2 = ft_strlen(s2);
 	if (lens2 == 0)
-		return (&s1[0]);
+		return ((char *)&s1[0]);
 	while ((i < n) && (s1[i] != '\0'))
 	{
 		if (s1[i] == s2[0])
@@ -39,7 +31,7 @@ char	*ft_strnstr(char *s1, char *s2, int n)
 			while ((s1[i + j] == s2[j]) && ((i + j) < n))
 			{
 				if ((j + 1) == lens2)
-					return (&s1[i]);
+					return ((char *)&s1[i]);
 				j++;
 			}
 		}

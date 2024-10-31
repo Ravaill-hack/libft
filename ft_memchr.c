@@ -6,20 +6,22 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 19:22:08 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/25 19:50:33 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:40:31 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void *s, int c, int n)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
 	unsigned char	ch;
-	int				i;
+	size_t			i;
 
 	str = (unsigned char *)s;
 	ch = (unsigned char)c;
 	i = 0;
-	while ((i < n) && (str[i] != '\0'))
+	while (i < n)
 	{
 		if (str[i] == ch)
 			return (&str[i]);

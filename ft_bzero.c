@@ -6,13 +6,15 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:46:07 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/24 18:54:42 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/31 10:35:39 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void	*adr, int len)
+#include "libft.h"
+
+void	*ft_bzero(void	*adr, size_t len)
 {
-	int		i;
+	size_t	i;
 	char	*str;
 
 	i = 0;

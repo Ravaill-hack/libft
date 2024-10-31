@@ -6,13 +6,15 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:48:04 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/25 11:17:57 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:39:29 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void	*dest, const void *src, int len)
+#include "libft.h"
+
+void	*ft_memmove(void	*dest, const void *src, size_t len)
 {
-	int					i;
+	size_t				i;
 	unsigned char		*strd;
 	const unsigned char	*strs;
 

@@ -6,13 +6,15 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:55:22 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/25 11:14:14 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/31 10:39:02 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void	*dest, const void *src, int len)
+#include "libft.h"
+
+void	*ft_memcpy(void	*dest, const void *src, size_t len)
 {
-	int					i;
+	size_t				i;
 	unsigned char		*strd;
 	const unsigned char	*strs;
 

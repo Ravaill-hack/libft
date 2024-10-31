@@ -6,13 +6,13 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:38:48 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/25 16:49:16 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:07:38 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(char c)
+int	ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
+	if (c >= 97 && c <= 122)
 		return (c - 32);
 	else
 		return (c);

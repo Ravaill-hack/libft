@@ -6,11 +6,11 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:55:08 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/30 10:15:16 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/31 10:28:30 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const	char *str)
 {

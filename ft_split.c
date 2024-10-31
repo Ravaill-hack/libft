@@ -6,7 +6,7 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:28:37 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/30 16:50:55 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/31 10:18:39 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t	nb_lines(char const *s, char const c)
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
-			count++;	
+			count++;
 		i++;
 	}
 	return (count);
@@ -83,9 +83,8 @@ char	**ft_split(char const *s, char c)
 			is ++;
 			j ++;
 		}
-		tab[i][j] = '\0';	
+		tab[i][j] = '\0';
 		i++;
 	}
 	return (tab);
 }
-

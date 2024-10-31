@@ -6,13 +6,13 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:49:56 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/25 16:50:27 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:07:48 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_tolower(char c)
+int	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (c >= 65 && c <= 90)
 		return (c + 32);
 	else
 		return (c);
