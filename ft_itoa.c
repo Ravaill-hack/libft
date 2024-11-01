@@ -6,24 +6,24 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:57:19 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 18:45:43 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/01 12:03:37 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static size_t	count_char(long int	nbint)
+static size_t	count_char(long int nbint)
 {
 	size_t	count;
 
 	count = 0;
 	if (nbint == 0)
-		return (1);
+		return (2);
 	if (nbint < 0)
 	{
 		count ++;
-		nbint = -nbint;		
+		nbint = -nbint;
 	}
 	while (nbint > 0)
 	{
@@ -33,7 +33,7 @@ static size_t	count_char(long int	nbint)
 	return (count + 1);
 }
 
-static char *fill_intchar(long int nbint)
+static char	*fill_intchar(long int nbint)
 {
 	char	*nbchar;
 	size_t	i;
@@ -42,15 +42,14 @@ static char *fill_intchar(long int nbint)
 	nbchar = (char *)malloc(count_char(nbint) * sizeof(char));
 	if (!nbchar)
 		return (NULL);
-	if (nbint == 0)
-		return "0";
 	nbchar[i] = '\0';
 	i--;
+	if (nbint == 0)
+		nbchar[0] = '0';
 	if (nbint < 0)
 	{
 		nbchar[0] = '-';
 		nbint = -nbint;
-		i = 1;
 	}
 	while (nbint > 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 10:14:27 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 12:38:08 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/01 11:45:45 by Lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ char	*ft_substr(char	const *s, unsigned int start, size_t	len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 
 #endif
