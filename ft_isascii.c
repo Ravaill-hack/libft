@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:33:30 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/24 17:54:38 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:11:51 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//	These  functions  check  whether c falls into a certain character class
+//	according  to the  specified  locale.   The functions without the "_l
+//	suffix perform the check based on the current locale.
 
 int	ft_isascii(int c)
 {

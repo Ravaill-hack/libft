@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:17:44 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/24 17:54:42 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:11:47 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//	These  functions  check  whether c falls into a certain character class
+//	according  to the  specified  locale.   The functions without the "_l
+//	suffix perform the check based on the current locale.
 
 int	ft_isalpha(int c)
 {

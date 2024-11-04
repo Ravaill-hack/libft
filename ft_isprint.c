@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:47:37 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/24 17:54:28 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:11:59 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//	These  functions  check  whether c falls into a certain character class
+//	according  to the  specified  locale.   The functions without the "_l
+//	suffix perform the check based on the current locale.
 
 int	ft_isprint(int c)
 {

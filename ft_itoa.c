@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:57:19 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/01 12:03:37 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:22:32 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+//	Alloue avec MALLOC et retourne une chaine de caracteres representant
+//	l'entier n recu en argument. Les nombres negatifs doivent etre geres.
 
 static size_t	count_char(long int nbint)
 {

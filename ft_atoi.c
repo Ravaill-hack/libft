@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 22:05:39 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 11:55:33 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:54:32 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+//	The  atoi() function converts the initial portion of the string pointed to
+//	by nptr to int. atoi() does not detect errors.
+//	RETURN VALUE : the converted value or 0 on error.
 
 int	ft_atoi(const char *str)
 {
