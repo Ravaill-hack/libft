@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 09:31:38 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 12:21:19 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:42:35 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,6 @@ char	*ft_substr(char	const *s, unsigned int start, size_t	len)
 
 int	main(void)
 {
-	puts(ft_substr("je vais bien", 3, 12));
+	puts(ft_substr("je vais bien", 6, 154545454542));
 }
 */

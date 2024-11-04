@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:51:38 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 18:03:00 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:43:45 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,3 +107,21 @@ char	**ft_split(char const *s, char c)
 	tab[i] = NULL;
 	return (tab);
 }
+
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	size_t	i;
+	char	*str;
+
+	i = 0;
+	str = ft_strdup("Je suis une catin");
+	while (i < ft_strlen(str))
+	{
+		puts(ft_split(str, ' ')[i]);
+		i ++;
+	}
+}
+*/
