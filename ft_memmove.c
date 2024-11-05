@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:48:04 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 11:39:29 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 09:42:17 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+//	The memmove() function copies n bytes from memory area src to memory area
+//	dest. The memory areas may overlap.
 
 void	*ft_memmove(void	*dest, const void *src, size_t len)
 {

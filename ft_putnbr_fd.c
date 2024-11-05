@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 15:24:55 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/01 15:55:58 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 09:59:26 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
+
+//	affiche un entier sur la sortie file descriptor indiquee
 
 void	ft_putnbr_fd(int n, int fd)
 {

@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 14:57:28 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/01 15:06:23 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 09:56:32 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
+
+//	Ecrit le caractere c sur la sortie file descriptor indiquee
 
 void	ft_putchar_fd(char c, int fd)
 {

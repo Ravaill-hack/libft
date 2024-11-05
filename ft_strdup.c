@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 22:48:57 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 12:05:23 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:03:48 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+//	The  strdup()  function returns a pointer to a new string which is a
+//	duplicate of the string s.  Memory for the new string is obtained with
+//	malloc.
 
 char	*ft_strdup(const char *s)
 {

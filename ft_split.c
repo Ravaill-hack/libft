@@ -6,12 +6,16 @@
 /*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:51:38 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/04 16:13:29 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:02:00 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+//	Decoupe une chaine de caracteres s suivant un separateur char c
+//	Renvoie NULL si l'alloc echoue, un pointeur vers le tableau sinon
+//	Le tableau se termine par NULL
 
 static size_t	ft_nbwords(char const *s, char c)
 {
