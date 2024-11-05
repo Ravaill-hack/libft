@@ -6,7 +6,7 @@
 /*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:06:27 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/05 09:55:10 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:19:19 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(void)
 	char	str[10];
 	strcpy(str, "Test test");
 	puts(str);
-	ft_memset(str, 'y', 2);
+	ft_memset((void *)str, 'y', 2);
 	puts(str);
 }
 */

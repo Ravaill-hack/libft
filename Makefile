@@ -38,22 +38,33 @@ SRCS_FILES =  \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
 
+SRCS_BONUS = \
+	ft_lstnew.c \
+	ft_lstadd_front.c \
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstadd_back.c
+
 OBJS = $(SRCS_FILES:.c=.o)
+BONUS_OBJS = $(SRCS_BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME):$(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar -rcs $(NAME) $(OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar -rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 .PHONY: all clean fclean re
