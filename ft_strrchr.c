@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:52:07 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 11:15:00 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:07:50 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+//	The strrchr() function returns a pointer to the first occurrence of the
+//	character c in the string s, searched backward.
 
 char	*ft_strrchr(const char *s, int c)
 {

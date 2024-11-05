@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 19:05:26 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 11:35:46 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:59:59 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+//	compares the n (at most) first n bytes of the two strings s1 and s2. The
+//	comparison is done using unsigned characters.
+//	Returns 0 if s1 == s2, a negative value if s1 > s2 and a positive value if
+//	si > s2.
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

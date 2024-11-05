@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:12:12 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 12:23:11 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:33:01 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+//	Alloue (avec malloc(3)) et retourne une nouvelle chaîne, résultat de la
+//	concaténation de s1 et s2.
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

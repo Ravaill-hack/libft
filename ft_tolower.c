@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:49:56 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 11:07:48 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:11:25 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//	convertit un caractere majuscule en minuscule
 
 int	ft_tolower(int c)
 {

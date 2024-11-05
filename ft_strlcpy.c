@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:20:19 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 10:47:03 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:53:16 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+//	The strlcpy() function copies up to size - 1 characters from the NUL
+//	-terminated string src to dst, NUL-terminating the result.
+//	Returns the total length of the string it tries to create, i.e. the
+//	length of src.
 
 size_t	ft_strlcpy(char *dest, char *src, size_t len)
 {

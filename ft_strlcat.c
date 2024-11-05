@@ -3,16 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:45:10 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 11:02:19 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:46:14 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size_d_fin)
+//	Concatenate two strings take the full size of the buffer (not just the
+//	length) and guarantee to NUL-terminate the result (as long as size is
+//	larger than 0 or, in the case of strlcat(), as long as there is at least
+//	one byte free in dst).  Note that a byte for the NUL should be included in
+//	size. Appends the NUL-terminated string src to the end of dst.  It will
+//	append at most size - strlen(dst) - 1 bytes, NUL-terminating the result.
+//
+//	Returns either : 
+//	- the initial length of dst plus the length of src
+//	- or, if strlcat() traverses size characters without finding a NUL, the
+//	length of the string is considered to be size and the destination string
+//	will not be NUL-terminated (since there was no space for the NULL.
+
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	len_d;
@@ -23,9 +36,9 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size_d_fin)
 	len_d = ft_strlen(dest);
 	len_s = ft_strlen(src);
 	len_ret = len_d + len_s;
-	if (size_d_fin < len_d)
-		return (size_d_fin + len_s);
-	while ((src[i] != '\0') && (len_d < (size_d_fin - 1)))
+	if (size < len_d)
+		return (size + len_s);
+	while ((src[i] != '\0') && (len_d < (size - 1)))
 	{
 		dest[len_d] = src[i];
 		len_d++;

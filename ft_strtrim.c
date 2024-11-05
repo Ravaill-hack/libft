@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:35:09 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 12:35:19 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:09:02 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+//	Alloue avec malloc et retourne une copie de la chaîne s1, sans les
+//	caractères spécifiés dans ’set’ au début et à la fin de la chaîne de
+//	caractères.
 
 int	ft_charstr(char const c, char const *s)
 {

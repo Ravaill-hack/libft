@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 14:09:22 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/01 14:52:58 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:55:05 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+//	Applique la fonction ’f’ à chaque caractère de la chaîne de caractères s
+//	en passant son index comme premier argument.
+//	Renvoie une nouvelle chaine de caracteres
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

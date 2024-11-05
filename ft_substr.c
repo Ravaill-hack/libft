@@ -6,12 +6,16 @@
 /*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 09:31:38 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/04 14:42:35 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:10:52 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+//	Alloue avec malloc et retourne une chaine de caracteres issue de s,
+//	commencant a start et de longueur maximale len.
+//	Renvoie la nouvelle chaine ou NULL si l'allocation echoue.
 
 char	*ft_substr(char	const *s, unsigned int start, size_t	len)
 {

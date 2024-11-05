@@ -6,7 +6,7 @@
 /*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 14:32:39 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/05 10:30:12 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:55:32 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 //	transmise comme argument, et en passant son index comme premier argument.
 //	Chaque caractère est transmis par adresse à ’f’ afin d’être modifié si
 //	nécessaire.
+//	Ne renvoie rien, modifie directement la chaine de caracteres s
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: lmatkows <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:38:48 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/10/31 11:07:38 by Lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:11:41 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//	convertit un caractere minuscule en majuscule
 
 int	ft_toupper(int c)
 {
