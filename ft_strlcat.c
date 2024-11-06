@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:45:10 by Lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/05 16:27:50 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:23:48 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 //	- the initial length of dst plus the length of src
 //	- or, if strlcat() traverses size characters without finding a NUL, the
 //	length of the string is considered to be size and the destination string
-//	will not be NUL-terminated (since there was no space for the NULL.
+//	will not be NUL-terminated (since there was no space for the NULL).
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -36,7 +36,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	len_d = ft_strlen(dest);
 	len_s = ft_strlen(src);
 	len_ret = len_d + len_s;
-	if (size < len_d)
+	if (size <= len_d)
 		return (size + len_s);
 	while ((src[i] != '\0') && (len_d < (size - 1)))
 	{
@@ -61,8 +61,8 @@ int main(void)
 	puts(src);
 	puts(dest1);
 	puts(dest2);
-	printf("%ld\n",strlcat(dest1, src, 30));
-	printf("%d\n",ft_strlcat(dest2, src, 30));
+	printf("%ld\n",strlcat(dest1, src, 400));
+	printf("%d\n",ft_strlcat(dest2, src, 400));
 	puts(dest1);
 	puts(dest2);
 }
