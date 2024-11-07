@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:15:28 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/07 16:38:40 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:46:36 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst->next != NULL)
+	if (!lst || !!f)
+		return ;
+	while (lst)
 	{
 		f(lst->content);
 		lst = lst->next;
 	}
-	f(lst->content);
 }
