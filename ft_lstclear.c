@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:00:02 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/07 09:29:44 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:19:27 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,9 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*adr;
-
-	adr = *lst;
-	while ((*lst)->next != NULL)
+	while (*lst != NULL)
 	{
 		ft_lstdelone(*lst, del);
 		*lst = (*lst)->next;
 	}
-	adr = NULL;
 }
