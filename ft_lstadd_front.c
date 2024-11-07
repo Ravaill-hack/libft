@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:25:20 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/05 16:27:28 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:48:05 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,27 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int	main(void)
+{
+	t_list	**lst;
+	t_list	*lst01;
+	t_list	*lst02;
+
+	lst01 = malloc(sizeof(t_list));
+	lst01->content = "Et toi";
+	lst01->next = NULL;
+	lst = &lst01;
+	lst02 = (ft_lstnew("Je vais bien"));
+	ft_lstadd_front(lst, lst02);
+	while (*lst != NULL)
+	{
+		puts((char *)((*lst)->content));
+		*lst = (*lst)->next;
+	}
+} 
+*/

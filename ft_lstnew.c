@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:41:08 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/05 16:27:35 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:30:29 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,14 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
+
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	puts((char *)(ft_lstnew("Je vais bien"))->content);
+	puts((char *)(ft_lstnew(""))->content);
+	puts((char *)(ft_lstnew("Ahhhhhhhhhhhhhhh"))->content);
+} 
+*/

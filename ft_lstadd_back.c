@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:47:46 by lmatkows          #+#    #+#             */
-/*   Updated: 2024/11/05 16:27:26 by lmatkows         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:07:27 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,22 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 /*
 #include <stdio.h>
+#include <stdlib.h>
 
-int main (void)
+int	main(void)
 {
-	
-}
+	t_list	**lst;
+	t_list	*lst01;
+	t_list	*lst02;
+
+	lst01 = (ft_lstnew("Je vais bien"));
+	lst = &lst01;
+	lst02 = (ft_lstnew("Et toi"));
+	ft_lstadd_back(lst, lst02);
+	while (*lst != NULL)
+	{
+		puts((char *)((*lst)->content));
+		*lst = (*lst)->next;
+	}
+} 
 */
